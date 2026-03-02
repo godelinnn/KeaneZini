@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>keane • links</title>
+  <style>
+    :root{
+      --bg:#f2f3f5;
+      --card:#ffffff;
+      --text:#111827;
+      --muted:#6b7280;
+      --btn:#f8fafc;
+      --btnBorder:#e5e7eb;
+      --shadow: 0 12px 30px rgba(0,0,0,.12);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      padding: 28px 12px 40px;
+    }
+    .wrap{ width:min(420px, 100%); }
+
+    .card{
+      background: rgba(255,255,255,.9);
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: 26px;
+      padding: 22px 18px 18px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* botão "estrelinha" no canto */
+    .badge{
+      position:absolute;
+      top:14px; left:14px;
+      width:34px; height:34px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid rgba(0,0,0,.08);
+      display:grid; place-items:center;
+      font-weight:800;
+      user-select:none;
+    }
+
+    .center{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+      padding-top: 22px;
+    }
+
+    .avatar{
+      width:86px; height:86px;
+      border-radius:999px;
+      object-fit:cover;
+      border: 5px solid rgba(0,0,0,.06);
+      background:#fff;
+    }
+
+    h1{
+      margin: 12px 0 6px;
+      font-size: 26px;
+      letter-spacing: .2px;
+    }
+
+    .icons{
+      display:flex;
+      gap: 10px;
+      margin: 8px 0 18px;
+    }
+    .iconbtn{
+      width:42px; height:42px;
+      border-radius:12px;
+      background:#fff;
+      border:1px solid rgba(0,0,0,.08);
+      display:grid; place-items:center;
+      text-decoration:none;
+      color: var(--text);
+      transition: transform .12s ease, opacity .12s ease;
+    }
+    .iconbtn:hover{ transform: translateY(-2px); opacity:.92; }
+
+    .links{ display:grid; gap: 12px; width:100%; margin-top: 4px; }
+
+    .btn{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      width:100%;
+      padding: 14px 14px;
+      border-radius: 14px;
+      background: var(--btn);
+      border:1px solid var(--btnBorder);
+      text-decoration:none;
+      color: var(--text);
+      font-weight: 700;
+      transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+    }
+    .btn:hover{ transform: translateY(-2px); box-shadow: 0 10px 18px rgba(0,0,0,.08); opacity:.96; }
+
+    .left{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width:0;
+    }
+    .label{ white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .arrow{ color: var(--muted); font-weight:900; }
+
+    .footer{
+      margin-top: 18px;
+      display:flex;
+      justify-content:center;
+    }
+    .pill{
+      background:#fff;
+      border:1px solid rgba(0,0,0,.08);
+      border-radius:999px;
+      padding: 12px 16px;
+      box-shadow: 0 10px 20px rgba(0,0,0,.10);
+      font-weight:700;
+      color: var(--text);
+    }
+
+    /* SVG ícones ficam alinhados */
+    svg{ width:22px; height:22px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="badge">✱</div>
+
+      <div class="center">
+        <!-- TROQUE A FOTO AQUI (pode ser link direto da imagem) -->
+        <img class="avatar" src="https://via.placeholder.com/200" alt="Foto">
+
+        <h1>keane</h1>
+
+        <div class="icons">
+          <!-- Instagram -->
+          <a class="iconbtn" href="https://instagram.com/SEUUSUARIO" target="_blank" aria-label="Instagram">
+            <!-- ícone instagram -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+              <circle cx="12" cy="12" r="4"></circle>
+              <circle cx="17.5" cy="6.5" r="1"></circle>
+            </svg>
+          </a>
+
+          <!-- WhatsApp -->
+          <a class="iconbtn" href="https://wa.me/55DDDNÚMERO?text=Ol%C3%A1%21" target="_blank" aria-label="WhatsApp">
+            <!-- ícone whatsapp -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.3-4.9A8.5 8.5 0 1 1 21 11.5Z"></path>
+              <path d="M9.2 10.6c.3-.7.6-.7.9-.7h.7c.2 0 .4.1.5.4l.6 1.4c.1.3.1.5-.1.7l-.4.4c-.1.1-.2.3-.1.5.2.6 1.1 1.9 2.4 2.5.4.2.6.2.8 0l.5-.6c.2-.2.4-.2.6-.1l1.3.6c.3.1.3.3.3.5 0 .3-.1 1-.7 1.4-.6.4-1.3.4-1.8.3-1.2-.3-2.7-1.1-4-2.4-1.3-1.3-2.1-2.8-2.4-4-.1-.5-.1-1.2.3-1.8Z"></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="links">
+          <!-- Botão WhatsApp -->
+          <a class="btn" href="https://wa.me/55DDDNÚMERO?text=Ol%C3%A1%21" target="_blank">
+            <span class="left">
+              <!-- ícone whatsapp -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.3-4.9A8.5 8.5 0 1 1 21 11.5Z"></path>
+                <path d="M9.2 10.6c.3-.7.6-.7.9-.7h.7c.2 0 .4.1.5.4l.6 1.4c.1.3.1.5-.1.7l-.4.4c-.1.1-.2.3-.1.5.2.6 1.1 1.9 2.4 2.5.4.2.6.2.8 0l.5-.6c.2-.2.4-.2.6-.1l1.3.6c.3.1.3.3.3.5 0 .3-.1 1-.7 1.4-.6.4-1.3.4-1.8.3-1.2-.3-2.7-1.1-4-2.4-1.3-1.3-2.1-2.8-2.4-4-.1-.5-.1-1.2.3-1.8Z"></path>
+              </svg>
+              <span class="label">WhatsApp</span>
+            </span>
+            <span class="arrow">⋮</span>
+          </a>
+
+          <!-- Botão Instagram -->
+          <a class="btn" href="https://instagram.com/SEUUSUARIO" target="_blank">
+            <span class="left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+              <span class="label">Instagram</span>
+            </span>
+            <span class="arrow">⋮</span>
+          </a>
+        </div>
+
+        <div class="footer">
+          <div class="pill">Junte-se a keane</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
