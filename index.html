@@ -28,22 +28,18 @@
     .wrap{ width:min(420px, 100%); }
 
     .card{
-      background: rgba(255,255,255,.9);
+      background: rgba(255,255,255,.95);
       border: 1px solid rgba(0,0,0,.06);
       border-radius: 26px;
-      padding: 22px 18px 18px;
+      padding: 30px 18px 24px;
       box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
     }
-
 
     .center{
       display:flex;
       flex-direction:column;
       align-items:center;
       text-align:center;
-      padding-top: 22px;
     }
 
     .avatar{
@@ -55,16 +51,16 @@
     }
 
     h1{
-      margin: 12px 0 6px;
+      margin: 14px 0 10px;
       font-size: 26px;
-      letter-spacing: .2px;
     }
 
     .icons{
       display:flex;
       gap: 10px;
-      margin: 8px 0 18px;
+      margin: 8px 0 20px;
     }
+
     .iconbtn{
       width:42px; height:42px;
       border-radius:12px;
@@ -73,11 +69,19 @@
       display:grid; place-items:center;
       text-decoration:none;
       color: var(--text);
-      transition: transform .12s ease, opacity .12s ease;
+      transition: .2s;
     }
-    .iconbtn:hover{ transform: translateY(-2px); opacity:.92; }
 
-    .links{ display:grid; gap: 12px; width:100%; margin-top: 4px; }
+    .iconbtn:hover{
+      transform: translateY(-2px);
+      opacity:.9;
+    }
+
+    .links{
+      display:grid;
+      gap: 12px;
+      width:100%;
+    }
 
     .btn{
       display:flex;
@@ -92,101 +96,74 @@
       text-decoration:none;
       color: var(--text);
       font-weight: 700;
-      transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+      transition: .2s;
     }
-    .btn:hover{ transform: translateY(-2px); box-shadow: 0 10px 18px rgba(0,0,0,.08); opacity:.96; }
+
+    .btn:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 10px 18px rgba(0,0,0,.08);
+    }
 
     .left{
       display:flex;
       align-items:center;
       gap:10px;
-      min-width:0;
-    }
-    .label{ white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-    .arrow{ color: var(--muted); font-weight:900; }
-
-    .footer{
-      margin-top: 18px;
-      display:flex;
-      justify-content:center;
-    }
-    .pill{
-      background:#fff;
-      border:1px solid rgba(0,0,0,.08);
-      border-radius:999px;
-      padding: 12px 16px;
-      box-shadow: 0 10px 20px rgba(0,0,0,.10);
-      font-weight:700;
-      color: var(--text);
     }
 
-    /* SVG ícones ficam alinhados */
     svg{ width:22px; height:22px; }
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="card">
-      <div class="badge">✱</div>
-
       <div class="center">
-        <!-- TROQUE A FOTO AQUI (pode ser link direto da imagem) -->
+
         <img class="avatar" src="https://via.placeholder.com/200" alt="Foto">
 
         <h1>keane</h1>
 
         <div class="icons">
           <!-- Instagram -->
-          <a class="iconbtn" href="https://instagram.com/SEUUSUARIO" target="_blank" aria-label="Instagram">
-            <!-- ícone instagram -->
+          <a class="iconbtn" href="https://instagram.com/SEUUSUARIO" target="_blank">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+              <rect x="3" y="3" width="18" height="18" rx="5"></rect>
               <circle cx="12" cy="12" r="4"></circle>
               <circle cx="17.5" cy="6.5" r="1"></circle>
             </svg>
           </a>
 
           <!-- WhatsApp -->
-          <a class="iconbtn" href="https://wa.me/55DDDNÚMERO?text=Ol%C3%A1%21" target="_blank" aria-label="WhatsApp">
-            <!-- ícone whatsapp -->
+          <a class="iconbtn" href="https://wa.me/55DDDNÚMERO" target="_blank">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.3-4.9A8.5 8.5 0 1 1 21 11.5Z"></path>
-              <path d="M9.2 10.6c.3-.7.6-.7.9-.7h.7c.2 0 .4.1.5.4l.6 1.4c.1.3.1.5-.1.7l-.4.4c-.1.1-.2.3-.1.5.2.6 1.1 1.9 2.4 2.5.4.2.6.2.8 0l.5-.6c.2-.2.4-.2.6-.1l1.3.6c.3.1.3.3.3.5 0 .3-.1 1-.7 1.4-.6.4-1.3.4-1.8.3-1.2-.3-2.7-1.1-4-2.4-1.3-1.3-2.1-2.8-2.4-4-.1-.5-.1-1.2.3-1.8Z"></path>
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a class="iconbtn" href="https://linkedin.com/in/SEUPERFIL" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM.22 8.09H4.8V24H.22zM7.98 8.09h4.39v2.16h.06c.61-1.16 2.11-2.39 4.35-2.39 4.65 0 5.5 3.06 5.5 7.04V24h-4.58v-7.97c0-1.9-.03-4.35-2.65-4.35-2.65 0-3.06 2.07-3.06 4.21V24H7.98z"/>
             </svg>
           </a>
         </div>
 
         <div class="links">
-          <!-- Botão WhatsApp -->
-          <a class="btn" href="https://wa.me/55DDDNÚMERO?text=Ol%C3%A1%21" target="_blank">
-            <span class="left">
-              <!-- ícone whatsapp -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.3-4.9A8.5 8.5 0 1 1 21 11.5Z"></path>
-                <path d="M9.2 10.6c.3-.7.6-.7.9-.7h.7c.2 0 .4.1.5.4l.6 1.4c.1.3.1.5-.1.7l-.4.4c-.1.1-.2.3-.1.5.2.6 1.1 1.9 2.4 2.5.4.2.6.2.8 0l.5-.6c.2-.2.4-.2.6-.1l1.3.6c.3.1.3.3.3.5 0 .3-.1 1-.7 1.4-.6.4-1.3.4-1.8.3-1.2-.3-2.7-1.1-4-2.4-1.3-1.3-2.1-2.8-2.4-4-.1-.5-.1-1.2.3-1.8Z"></path>
-              </svg>
-              <span class="label">WhatsApp</span>
-            </span>
-            <span class="arrow">⋮</span>
+          <a class="btn" href="https://wa.me/55DDDNÚMERO" target="_blank">
+            <span class="left">WhatsApp</span>
+            <span>⋮</span>
           </a>
 
-          <!-- Botão Instagram -->
           <a class="btn" href="https://instagram.com/SEUUSUARIO" target="_blank">
-            <span class="left">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
-                <circle cx="12" cy="12" r="4"></circle>
-                <circle cx="17.5" cy="6.5" r="1"></circle>
-              </svg>
-              <span class="label">Instagram</span>
-            </span>
-            <span class="arrow">⋮</span>
+            <span class="left">Instagram</span>
+            <span>⋮</span>
+          </a>
+
+          <a class="btn" href="https://linkedin.com/in/SEUPERFIL" target="_blank">
+            <span class="left">LinkedIn</span>
+            <span>⋮</span>
           </a>
         </div>
 
-        <div class="footer">
-          <div class="pill">Junte-se a keane</div>
-        </div>
       </div>
     </div>
   </div>
